@@ -105,3 +105,11 @@ pub fn main() anyerror!void {
         //----------------------------------------------------------------------------------
     }
 }' >> src/main.zig
+
+echo 'zig-cache/
+.zig-cache/
+zig-out/
+.idea/
+Project/*
+libraylib.a
+**/.DS_Store' >> .gitignore
