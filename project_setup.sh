@@ -54,14 +54,14 @@ pub fn build(b: *std.Build) !void {
     b.installArtifact(exe);
 }' >> build.zig
 
-HASH=$(zig fetch https://github.com/Not-Nik/raylib-zig/archive/devel.tar.gz)
+HASH=$(zig fetch https://github.com/Not-Nik/raylib-zig/archive/58df62807f62bef1db79538d04b37b9f79909d0a.tar.gz)
 
 echo '.{
     .name = "'$PROJECT_NAME'",
     .version = "0.0.1",
     .dependencies = .{
         .@"raylib-zig" = .{
-            .url = "https://github.com/Not-Nik/raylib-zig/archive/devel.tar.gz",
+            .url = "https://github.com/Not-Nik/raylib-zig/archive/58df62807f62bef1db79538d04b37b9f79909d0a.tar.gz",
             .hash = "'$HASH'",
         },
     },
